@@ -1,0 +1,85 @@
+/* TODO 待补充代码 */
+.treatment {
+  background-image: url("images/stream.svg");
+  background-repeat: no-repeat;
+  background-size: 100px 100px;
+  grid-area: 1 / 2 / 4 / 6;
+}
+
+/* 以下代码不需要修改 */
+.app-box {
+  width: 500px;
+  height: 500px;
+  margin: 0 auto;
+  border: 12px solid #6d5720;
+  border-radius: 12px;
+  position: sticky;
+}
+.garden,
+.plants,
+.overlay {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, 20%);
+  grid-template-rows: repeat(5, 20%);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.plot {
+  width: 100%;
+  height: 100%;
+  background-color: #836b32;
+  background-size: 100px;
+  box-shadow: inset 2px 2px 0 rgb(255 255 255 / 5%), inset -2px -2px 0 #665235;
+}
+.plant,
+.treatment {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.plant {
+  grid-area: 1 / 2 / 4 / 6;
+}
+.plant .bg {
+  background-image: url(../images/cactus.svg);
+}
+
+.plant .bg,
+.treatment .bg {
+  width: 100%;
+  height: 100%;
+  background-position: left top;
+  background-size: 100px;
+}
+
+@keyframes scroll {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 100px;
+  }
+}
+
+.treatment .bg {
+  background-color: rgba(81, 140, 179, 1);
+  background-image: url(../images/stream.svg);
+  /* animation: scroll 5s linear infinite; */
+}
+
+.overlay {
+  /* 土地列表 */
+  z-index: 10;
+}
+.garden {
+  /* 水源列表 */
+  z-index: 20;
+}
+.plants {
+  /* 植物列表 */
+  z-index: 30;
+}
