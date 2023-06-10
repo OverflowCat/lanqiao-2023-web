@@ -1,0 +1,140 @@
+* {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.start-game-cover {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 2023;
+}
+
+.start-game-cover .inner {
+  background-color: #fff;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  width: 30%;
+  height: 50px;
+  line-height: 50px;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.box {
+  box-sizing: border-box;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  border: 1px solid #e2e0e0;
+  font-size: 13px;
+}
+
+.dragon {
+  background: url("../images/dragon.png") rgb(245, 245, 245);
+  background-size: cover;
+}
+
+.angel {
+  background: url("../images/angel.png") rgb(245, 245, 245);
+  background-size: cover;
+}
+
+.princess {
+  background: url("../images/medieval.png") rgb(245, 245, 245);
+  background-size: cover;
+}
+
+.left-hide {
+  border-left: 1px solid transparent;
+}
+
+.right-hide {
+  border-right: 1px solid transparent;
+}
+
+.top-hide {
+  border-top: 1px solid transparent;
+}
+
+.bottom-hide {
+  border-bottom: 1px solid transparent;
+}
+
+.container {
+  margin: 20px auto;
+  width: 250px;
+  height: 250px;
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid #111;
+}
+
+#blood {
+  padding: 20px;
+  margin: 20px auto;
+  width: 250px;
+}
+
+.active {
+  /* background-color: #409EFF;
+      color: #FFF; */
+  border: 5px solid #409eff;
+  line-height: 40px;
+}
+
+.active.dragon {
+  border: 5px solid red;
+}
+
+#control {
+  width: 250px;
+  margin: 0 auto;
+  display: flex;
+}
+
+#control .ctl-input {
+  outline: none;
+  padding-left: 10px;
+}
+
+#control .btn {
+  outline: none;
+  border-color: #409eff;
+  color: #fff;
+  background-color: #409eff;
+  border: #409eff;
+  padding: 8px 15px;
+  cursor: pointer;
+}
+
+.tip {
+  position: absolute;
+  top: 130px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  width: 300px;
+  height: 50px;
+  line-height: 50px;
+  color: #fff;
+  transition: all 1s;
+}
+
+.hide {
+  opacity: 0;
+}
+
+.show {
+  opacity: 1;
+}
+
+.none {
+  display: none;
+}

@@ -103,7 +103,7 @@ grid-area: 1 / 2 / 3 / 4;
 错信息（`(^) id=vail_name`）元素。
 2. 如果宠物昵称存在，则点击穿衣服、不穿衣服、跟它玩、吃零⻝按钮（四个按钮均已绑定点击事
 件）均会记录不同的日志。现在需要完善 `showLog` 方法，实现宠物互动记录。 `showLog` 方法的参
-数 (^) record 表示要记录的互动消息。最多记录 10 条最新的互动消息，并将最新的互动消息记录在
+数 record 表示要记录的互动消息。最多记录 10 条最新的互动消息，并将最新的互动消息记录在
 最上面。每一条日志都应添加到日志列表元素（`id=list`）中，DOM 结构如下：
     ```html
     // DOM 结构必须按照此写法
@@ -187,12 +187,12 @@ element-ui 的轮播图指示点样式默认为⻓条状，在某些场景下不
 
 使用示例：
 
-
 ```vue
 <template>
     <el-carousel ... @change="onCarouselChange"> ... </el-carousel>
 </template>
 ```
+
 ```js
 <script>
 module.exports = {
@@ -206,10 +206,11 @@ module.exports = {
 };
 </script>
 ```
+
  `Carousel` 方法：
-**方法名 说明 参数**
 
 `setActiveItem` 手动切换幻灯片，需要切换的幻灯片的索引，从 0 开始
+
 使用示例：
 
 ```vue
@@ -217,6 +218,7 @@ module.exports = {
     <el-carousel ... ref="carousel"> ... </el-carousel>
 </template>
 ```
+
 ```js
 <script>
 module.exports = {
@@ -235,9 +237,8 @@ module.exports = {
 
 ## 规定
 
-```
 请严格按照考试步骤操作，切勿修改考试默认提供项目中的文件名称、文件夹路径、class 名、id 名、图片名等，以免造成判题无法通过。
-```
+
 ## 判分标准
 
 - 完成目标 1 ，得 5 分。
@@ -289,21 +290,18 @@ module.exports = {
 
 最终效果可参考文件夹下面的 gif 图，图片名称为 effect.gif（提示：可以通过 VS Code 或者浏览器预览 gif 图片）。
 
-
 ## 规定
 
-```
-请严格按照考试步骤操作，切勿修改考试默认提供项目中的文件名称、文件夹路径、class 名、id
-名、图片名等，以免造成判题无法通过。
-```
+请严格按照考试步骤操作，切勿修改考试默认提供项目中的文件名称、文件夹路径、class 名、id 名、图片名等，以免造成判题无法通过。
+
 ## 判分标准
 
 本题完全实现题目目标得满分，否则得 0 分。
 
-
 # 讨论区
 
 ## 介绍
+
 讨论区提供了一个与其他学习者交流和讨论的场所，以便共同探讨和理解各种知识和主题。在讨论区中，学习者可以创建和加入不同的讨论组，参与到热⻔话题的讨论中，也可以发起新的话题和问题。学习者可以分享自己的知识、经验和观点，也可以向其他学习者请教问题和寻求帮助。现邀请你来建设讨论区⻚面，快来发光发热吧。
 
 ## 准备
@@ -344,7 +342,6 @@ module.exports = {
 ## 判分标准
 
 本题根据⻚面布局的相似度给分，低于 50% 得 0 分，高于 50% 则按比例给分。
-
 
 # github contribution
 
@@ -402,10 +399,11 @@ module.exports = {
     </div>
     ```
 
-完成后的最终效果⻅文件夹下面的 gif 图，图片名称为 (^) effect.gif （提示：可以通过 VS Code 或者浏览器预览 gif 图片）。
+完成后的最终效果⻅文件夹下面的 gif 图，图片名称为 `effect.gif`（提示：可以通过 VS Code 或者浏览器预览 gif 图片）。
 
 实现上述功能所需的 echarts Api 如下：
- calendar Api：
+
+`calendar` Api：
 **参数 说明**
 cellSize
 
@@ -417,7 +415,7 @@ cellSize
 ```
 itemStyle
 ```
-### 对象属性，设置日历格的样式; 其中：
+对象属性，设置日历格的样式; 其中：
 
 ```
 color 用于设置图形的默认颜色
@@ -426,15 +424,12 @@ borderWidth 用于设置描边线宽。为 0 时无描边
 ```
 splitLine
 ```
-### 对象属性，设置日历坐标分隔线的样式；其中：
 
-```
-show 为 boolean 类型，用于设置是否显示分隔线。默认显示
-```
-```
-yearLabel 对象属性，设置日历坐标中年的样式；其中：
-show 为 boolean 类型，用于是否在普通状态下显示标签
-```
+对象属性，设置日历坐标分隔线的样式；其中：
+
+- `show` 为 `boolean` 类型，用于设置是否显示分隔线。默认显示
+- `yearLabel` 对象属性，设置日历坐标中年的样式；其中：
+  - `show` 为 `boolean` 类型，用于是否在普通状态下显示标签
 
 tooltip Api：
 
@@ -448,7 +443,7 @@ formatter
 提示框浮层内容格式器，支持回调函数的形式。回调函数格式：
 
 ```typescript
-(params: Object | Array, ticket: string, callback: (ticket: string, html: string)) => string | HTMLElement (^) | HTMLElement (^) [] ，支持返回 HTML 字符串或者创建的 DOM 实例，第一个参数 params 是 formatter 需要的数据集。
+(params: Object | Array, ticket: string, callback: (ticket: string, html: string)) => string | HTMLElement | HTMLElement [] ，支持返回 HTML 字符串或者创建的 DOM 实例，第一个参数 params 是 formatter 需要的数据集。
 ```
 
 ## 规定
@@ -500,13 +495,12 @@ formatter
 
 找到 js 下面的 `index.js` 和 `checkPlagiarism.js`，找到其中的 TODO 部分，完成代码，达到以下目标：
 1. 完善 `index.js` 的 TODO 部分，在 **不使用任何第三方库** 的情况下完成文章数据请求（数据来源 `./data.json`，其中 `articleOne` 为第一篇文章， `articleTwo` 为第二篇文章，以此类推）。
-2. 完善 (^) index.js 的 TODO 部分，对比文章（`(^) id = compareText`）元素 **默认显示第一篇文章** ，当（`id = articleSelect`）下拉框切换时，（`id = compareText`）中显示对应的文章数据。
+2. 完善 index.js 的 TODO 部分，对比文章（`(^) id = compareText`）元素 **默认显示第一篇文章** ，当（`id = articleSelect`）下拉框切换时，（`id = compareText`）中显示对应的文章数据。
 3. 完善 `checkPlagiarism.js` 下的分词函数 `wordSegmentation` ，该分词函数接受一个参数，参数为文章内容，返回文章内容分词后的数组。分词规则如下：
 
-当文字内容前后是标点符号、英文和停用词（代码中已提供）则去掉标点符号、英文和停用词进行分词：
+当文字内容前后是标点符号、英文和停用词（代码中已提供）则去掉标点符号、英文和停用词进行分词。
 
-如：`人工智能（Artificial Intelligence，缩写为 AI）英文名。是研究、开发用于模拟、延伸和扩展人的智
-能的理论、方法、技术及应用系统的一⻔新技术科学。`
+> 如：`人工智能（Artificial Intelligence，缩写为 AI）英文名。是研究、开发用于模拟、延伸和扩展人的智能的理论、方法、技术及应用系统的一⻔新技术科学。`
 
 1. “人工智能”后面是标点符号，分词后为“人工智能”。
 2. （Artificial Intelligence，缩写为 AI）中“缩写”的前面是英文和标点符号，后面的“ **为** ”是停用词，分词后为 “缩写”。
@@ -576,7 +570,7 @@ formatter
 
 ## 目标
 
-找到 index.js 中的 `findUnlinkImages` 函数，完善其中的 TODO 部分。使用 Node.js 中的 fs 等内置模块进行文件操作，查找出 (^) images 目录下 **未被任何文章（** (^) **`articles` 文件夹下的 .md 文档）引用的“无效图片”** ，最终需要在 findUnlinkImages 这个函数中返回包含这些“无效图片”的数组。
+找到 index.js 中的 `findUnlinkImages` 函数，完善其中的 TODO 部分。使用 Node.js 中的 fs 等内置模块进行文件操作，查找出 images 目录下 **未被任何文章（** **`articles` 文件夹下的 .md 文档）引用的“无效图片”** ，最终需要在 findUnlinkImages 这个函数中返回包含这些“无效图片”的数组。
 
 > **提示**：Markdown 中插入图片语法为： `![](xxxxxx.png)`
 
@@ -637,7 +631,7 @@ node test.min.js
 
 找到 index.html 以及 components 下面的多选框组件（`checkbox.js`）和下拉框组件（`select.js`）中的 TODO 部分，达成以下目标：
 
-1. 请仔细阅读接口设计，完成 index.html 中的 `TODO` 部分，根据请求回来的 JSON 数据中 `type` 的不同，动态生成对应的表单组件。完成多选框组件（ (^)`checkbox.js`）和下拉框组件（`select.js`）初始化时需要定义的 `data` 以及方法，将数据正确显示到对应的组中，确保⻚面无报错且组件正常显示。
+1. 请仔细阅读接口设计，完成 index.html 中的 `TODO` 部分，根据请求回来的 JSON 数据中 `type` 的不同，动态生成对应的表单组件。完成多选框组件（`checkbox.js`）和下拉框组件（`select.js`）初始化时需要定义的 `data` 以及方法，将数据正确显示到对应的组中，确保⻚面无报错且组件正常显示。
 
    **接口数据设计如下：**
    - `type` 表示组件类型
@@ -720,7 +714,7 @@ node test.min.js
 - 若骑士停留位置（红色边框 `class` 包含 `active`）有恶⻰，则进行战斗并扣除 2 点血量。
 - 若骑士停留位置（蓝色边框 `class` 包含 `active`）有天使，则增加 3 点血量。
 - 如果血量小于等于 0 ，则弹出红色背景提示框，提示重伤不治。
-- 如果骑士（蓝色边框 (^) class 包含 (^) active ）顺利到达公主的位置，则弹出绿色背景提示框，提示营救成功。
+- 如果骑士（蓝色边框 class 包含 active ）顺利到达公主的位置，则弹出绿色背景提示框，提示营救成功。
 
 ## 准备
 
@@ -749,9 +743,9 @@ node test.min.js
 
 ## 目标
 
-请在 (^) `js/index.js` 文件中补全代码。
+请在 `js/index.js` 文件中补全代码。
 
-最终效果可参考文件夹下面的 gif 图，营救成功图片名称为 effect-1.gif ，营救失败图片名称为 (^) effect-2.gif （提示：可以通过 VS Code 或者浏览器预览 gif 图片）。
+最终效果可参考文件夹下面的 gif 图，营救成功图片名称为 effect-1.gif ，营救失败图片名称为 effect-2.gif （提示：可以通过 VS Code 或者浏览器预览 gif 图片）。
 
 具体需求如下：
 1. 补全 js/index.js 中的 `mazePath` 函数，将起点到终点顺时针经过的每个元素（即 class 包含 box ） data-index 属性值依次保存在数组中并返回。
@@ -772,7 +766,7 @@ node test.min.js
     注意： `mazePath` 函数检测时使用的输入数据与题目中给出的示例数据可能是不同的。考生的程序必须是通用的，不能只对需求中给定的数据有效。
 2. 补全 js/index.js 中的 `moveHandler` 函数，需求如下：
     - 根据点击“⻢上营救”按钮后获得的随机步数，由外向内顺时针到达指定位置。
-    - 根据骑士到达位置（`(^) class 包含 (^) active`）是否存在恶⻰（该元素节点 (^) class 包含 (^) dragon）或者天使（该元素节点 class 包含 angel ）执行函数 bloodCalculator(boxEle) 计算出目前目前骑士剩余的血量。
+    - 根据骑士到达位置（`(^) class 包含 active`）是否存在恶⻰（该元素节点 class 包含 dragon）或者天使（该元素节点 class 包含 angel ）执行函数 bloodCalculator(boxEle) 计算出目前目前骑士剩余的血量。
     - 根据血量和位置显示正确的提示框：血量为  0  时，执行函数 tipRender("warning") ；到达公主所在位置，执行函数 tipRender("success") 。
 
 ## 规定

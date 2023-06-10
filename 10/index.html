@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>恶龙与公主</title>
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+
+  <body>
+    <div class="start-game-cover">
+      <div class="inner">开始游戏</div>
+    </div>
+    <ul class="container">
+      <li class="box right-hide active"></li>
+      <li class="box left-hide right-hide"></li>
+      <li class="box left-hide right-hide"></li>
+      <li class="box left-hide right-hide"></li>
+      <li class="box left-hide bottom-hide"></li>
+      <li class="box bottom-hide right-hide"></li>
+      <li class="box left-hide right-hide"></li>
+      <li class="box left-hide right-hide"></li>
+      <li class="box left-hide bottom-hide"></li>
+      <li class="box top-hide bottom-hide"></li>
+      <li class="box top-hide bottom-hide"></li>
+      <li class="box bottom-hide right-hide"></li>
+      <li class="box left-hide"></li>
+      <li class="box top-hide bottom-hide"></li>
+      <li class="box top-hide bottom-hide"></li>
+      <li class="box top-hide bottom-hide"></li>
+      <li class="box top-hide right-hide"></li>
+      <li class="box left-hide right-hide"></li>
+      <li class="box left-hide top-hide"></li>
+      <li class="box top-hide bottom-hide"></li>
+      <li class="box right-hide top-hide"></li>
+      <li class="box left-hide right-hide"></li>
+      <li class="box left-hide right-hide"></li>
+      <li class="box left-hide right-hide"></li>
+      <li class="box left-hide top-hide"></li>
+    </ul>
+    <div id="control">
+      <input
+        type="text"
+        class="ctl-input"
+        disabled
+        placeholder="移动的步数1-3之间"
+      />
+      <button class="btn">马上营救</button>
+    </div>
+    <div id="blood" class="center">剩余血量：<span></span></div>
+    <div class="tip hide"></div>
+    <div class="hide">
+      <div id="dragonPos"></div>
+      <div id="angelPos"></div>
+      <div id="step"></div>
+      <div id="game-path">[]</div>
+    </div>
+    <div class="hide">
+      <div id="dyadic-array">[[1,2,3],[4,5,6]]</div>
+      <div id="maze-path"></div>
+    </div>
+    <script src="./js/index.js"></script>
+    <script>
+      document
+        .querySelector(".start-game-cover .inner")
+        .addEventListener("click", (e) => {
+          let dragonPos = document.querySelector("#dragonPos").innerText;
+          let angelPos = document.querySelector("#angelPos").innerText;
+          let step = document.querySelector("#step").innerText;
+          !!dragonPos && (game.gameData.dragonPos = JSON.parse(dragonPos));
+          !!angelPos && (game.gameData.angelPos = Number(angelPos));
+          !!step && (game.gameData.step = Number(step));
+
+          e.target.parentNode.classList.add("none");
+          game.initPlay();
+          document
+            .querySelector("#dyadic-array")
+            .addEventListener("click", (e) => {
+              document.querySelector("#maze-path").innerHTML = JSON.stringify(
+                game.mazePath(JSON.parse(e.target.innerText))
+              );
+            });
+        });
+    </script>
+  </body>
+</html>
