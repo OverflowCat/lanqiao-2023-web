@@ -28,8 +28,7 @@
 
 ## 介绍
 
-朋友花园内的植物严重缺水，急需你的帮助，让我们用目前 CSS3 中新增的 Grid 布局去完成灌溉任
-务吧！
+朋友花园内的植物严重缺水，急需你的帮助，让我们用目前 CSS3 中新增的 Grid 布局去完成灌溉任务吧！
 
 ## 准备
 
@@ -114,8 +113,7 @@ grid-area: 1 / 2 / 3 / 4;
     <div>第 1 次互动：你喂小蓝吃了零⻝，体重 +1kg</div>
     </div>
     ```
-最终效果可参考文件夹下面的 gif 图，图片名称为 effect.gif（提示：可以通过 VS Code 或者浏览器预览
-gif 图片）。
+最终效果可参考文件夹下面的 gif 图，图片名称为 effect.gif（提示：可以通过 VS Code 或者浏览器预览 gif 图片）。
 
 ## 规定
 
@@ -176,8 +174,7 @@ element-ui 的轮播图指示点样式默认为⻓条状，在某些场景下不
 1. 修改 template 模版和 script 脚本内容，使⻚面展示与图片数量对应的指示点，并使指示点的样式变化和轮播图切换同步（例如当展示到第四张图片时，就给第四个指示点添加 `.active` 类）。
 2. 当用户点击某个指示点时，将轮播图切换到指示点对应的图片。
 
-最终效果可参考文件夹下面的 gif 图，图片名称为 `effect.gif`（提示：可以通过 VS Code 或者浏览器预览
-gif 图片）。
+最终效果可参考文件夹下面的 gif 图，图片名称为 `effect.gif`（提示：可以通过 VS Code 或者浏览器预览 gif 图片）。
 
 实现上述功能所需的 API 如下：
 
@@ -199,14 +196,14 @@ gif 图片）。
 ```js
 <script>
 module.exports = {
-...
+    ...
     methods: {
         onCarouselChange(index) {
             // 该方法会在轮播图切换至第二⻚时打印 1 ，第三⻚时打印 2 ，以此类推
             console.log(index);
-           },
         },
-    };
+    },
+};
 </script>
 ```
  `Carousel` 方法：
@@ -224,12 +221,12 @@ module.exports = {
 <script>
 module.exports = {
     ...
-        methods: {
+    methods: {
         // 调用该方法会使轮播图跳转至第一⻚
-            setActive() {
-                this.$refs.carousel.setActiveItem(0);
-            },
+        setActive() {
+            this.$refs.carousel.setActiveItem(0);
         },
+    },
     };
 </script>
 ```

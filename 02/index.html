@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>萌宠小玩家</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+  <body>
+    <div id="app">
+      <div class="top">
+        <div class="left sk0"></div>
+        <div class="right">
+          <div class="infos">
+            <div class="form-group">
+              <label for="name">宠物昵称</label>
+              <input
+                type="text"
+                class="form-control"
+                id="nickname"
+                placeholder="请输入宠物昵称"
+                aria-describedby="inputSuccess2Status"
+              />
+              <span id="vail_name" style="display: none" class="help-block"
+                >请您检查输入的宠物昵称</span
+              >
+            </div>
+            <div class="btn-group" data-toggle="buttons">
+              <label class="btn btn-primary active" id="dress">
+                <input type="radio" name="options" id="option1" value="true" />
+                穿衣服
+              </label>
+              <label class="btn btn-primary" id="undress">
+                <input type="radio" name="options" value="false" id="option2" />
+                不穿衣服
+              </label>
+            </div>
+            <div class="weight">
+              <!-- 体重 -->
+              <span id="weight"></span>
+              kg
+            </div>
+            <div class="love-content">
+              <!-- 体重 -->
+              心情指数：
+              <span id="love">20</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="btns">
+        <button type="button" class="btn btn-success" id="addWeight">
+          吃零食，增加体重1kg
+        </button>
+        <button type="button" class="btn btn-warning" id="loseWeight">
+          跟它玩，心情指数加1
+        </button>
+      </div>
+      <div class="console">
+        <fieldset>
+          <legend>行动记录</legend>
+        </fieldset>
+        <div id="list"></div>
+      </div>
+    </div>
+    <script src="./js/index.js"></script>
+  </body>
+</html>
