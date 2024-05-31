@@ -1,0 +1,55 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #242333;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  perspective: 1000px;
+  width: 470px;
+}
+
+.screen {
+  background-color: #fff;
+  height: 70px;
+  width: 100%;
+  transform: rotateX(-45deg);
+  box-shadow: 0 3px 10px rgba(255, 255, 255, 0.7);
+  color: #242333;
+  text-align: center;
+  line-height: 70px;
+  font-size: 30px;
+}
+
+.seat {
+  background-color: #444451;
+  height: 40px;
+  width: 45px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+/* TODO：待补充代码 */
+.seat-area {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 10px;
+}
+
+.seat:nth-of-type(8n+2) {
+  margin-right: 20px;
+}
+
+.seat:nth-of-type(8n+7) {
+  margin-left: 20px;
+}
